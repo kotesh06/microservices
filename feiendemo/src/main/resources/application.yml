@@ -1,0 +1,23 @@
+server:
+  port: ${PORT:8012}   
+  
+eureka:        
+  instance:
+    leaseRenewalIntervalInSeconds: 5
+    leaseExpirationDurationInSeconds: 2
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8777/eureka/
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 5
+  
+spring:   
+  application:
+    name: feign-demo-service  
+
+  
+logging:
+  level:
+    com.example: DEBUG
