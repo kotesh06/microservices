@@ -44,6 +44,10 @@ public class DepartmentController {
 		return "Welcome Config Service #"+message;
 	}
 	
+	@RequestMapping(method=RequestMethod.GET)
+	public String helloT(){
+		return "Welcome Config Service #"+message;
+	}
 	/*  private  Map<Integer, Department> deptData; 
 	
 	@RequestMapping(value="/department/{deptno}", method=RequestMethod.GET)

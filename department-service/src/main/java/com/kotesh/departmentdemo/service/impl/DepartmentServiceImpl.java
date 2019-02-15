@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 import org.springframework.stereotype.Service;
 
 import com.kotesh.departmentdemo.model.DepartmentDTO;
+import com.kotesh.departmentdemo.service.DepartmentNotFoundException;
 import com.kotesh.departmentdemo.service.DepartmentService;
 
 @Service
@@ -23,6 +24,8 @@ public class DepartmentServiceImpl implements DepartmentService {
 		DepartmentDTO deptDetails = null;
 		if(matchedLists!=null && matchedLists.size()>0) {
 			deptDetails=matchedLists.get(0);
+		}else {
+			throw new DepartmentNotFoundException("Department ID"+departmentId+" Not found");
 		}
 		return deptDetails;
 	}
