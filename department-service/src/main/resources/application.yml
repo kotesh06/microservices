@@ -8,11 +8,20 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8777/eureka/
-    healthcheck:
-      enabled: true
-    lease:
-      duration: 5
-  
+      healthcheck:
+       enabled: true
+       lease:
+          duration: 5
+management:
+    endpoints:
+     web:
+      exposure:
+       include : "*"
+       exclude : "loggers"
+    endpoint:
+     shutdown:
+       enabled: true
+   
 
   
 logging:

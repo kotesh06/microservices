@@ -1,4 +1,4 @@
-package com.kotesh.departmentdemo.service;
+package com.kotesh.departmentdemo.practise;
 
 import java.util.ArrayList;
 import java.util.List;
